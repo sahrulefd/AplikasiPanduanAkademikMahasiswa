@@ -1,19 +1,35 @@
-// src/data/courses.js
+// Define interface untuk data safety TypeScript
+export interface Course {
+  id: string;
+  code: string;
+  name: string;
+  sks: number;
+  semester: number;
+  dosen: string; 
+  email: string;
+  phone: string;
+  description: string;
+  location: string;
+  coordinates: {
+    latitude: number;
+    longitude: number;
+  };
+}
 
-const COURSES_DATA = [
+const COURSES_DATA: Course[] = [
   {
     id: '1',
     code: 'TI-23351',
     name: 'Pemrograman Mobile',
     sks: 3,
     semester: 4,
-    lecturer: 'ramdan, M.Kom.',
+    dosen: 'Ramdan, M.Kom.',
     email: 'ramdan@uir.ac.id',
-    phone: '+6281234567890', // Ganti dengan nomor WhatsApp valid untuk testing
+    phone: '+6281234567890', 
     description: 'Mata kuliah ini membahas mengenai pengembangan aplikasi perangkat bergerak menggunakan React Native dengan fokus pada komponen navigasi, state management, dan integrasi dengan API atau native features.',
     location: 'Gedung Fakultas Teknik UIR, Ruang 302',
     coordinates: {
-      latitude: -0.4545, // Contoh koordinat, bisa disesuaikan dengan UIR
+      latitude: -0.4545, 
       longitude: 101.4485
     }
   },
@@ -23,7 +39,7 @@ const COURSES_DATA = [
     name: 'Keamanan Komputer & Jaringan',
     sks: 3,
     semester: 4,
-    lecturer: 'diki, M.T.',
+    dosen: 'Diki, M.T.',
     email: 'diki@uir.ac.id',
     phone: '+6289876543210',
     description: 'Mempelajari konsep keamanan jaringan komputer, konfigurasi firewall, serta implementasi Intrusion Detection System (IDS) menggunakan Snort untuk mendeteksi ancaman secara real-time.',
@@ -39,7 +55,7 @@ const COURSES_DATA = [
     name: 'Kecerdasan Buatan',
     sks: 3,
     semester: 4,
-    lecturer: 'salsabila, M.Kom.',
+    dosen: 'Salsabila, M.Kom.',
     email: 'salsabila@uir.ac.id',
     phone: '+6285211223344',
     description: 'Membahas teknik-teknik kecerdasan buatan, machine learning (regresi dan clustering), pemrosesan bahasa alami (NLP) untuk sentiment analysis, hingga pengenalan Graph RAG menggunakan Neo4j.',

@@ -1,4 +1,36 @@
 {
-  "name": "PanduanAkademikMahasiswaBySahrulEfendi",
-  "displayName": "PanduanAkademikMahasiswaBySahrulEfendi"
+  "expo": {
+    "name": "App_Edu",
+    "slug": "App_Edu",
+    "version": "2.0.0",
+    "jsEngine": "jsc",
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#4F46E5",
+          "sounds": []
+        }
+      ]
+    ],
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      },
+      "jsEngine": "jsc",
+      "permissions": [
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE",
+        "WAKE_LOCK"
+      ],
+      "useNextNotificationsApi": true
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": ["fetch", "remote-notification"]
+      }
+    }
+  }
 }
